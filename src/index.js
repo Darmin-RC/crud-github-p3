@@ -3,6 +3,8 @@ import cors from "cors";
 import config from "./config/config.js";
 import userRoutes from "./routes/users.routes.js";
 import postRoutes from "./routes/posts.routes.js";
+import likeRoutes from "./routes/likes.routes.js";
+import commentRoutes from "./routes/comments.routes.js";
 
 const app = express();
 
@@ -21,6 +23,8 @@ app.use(userRoutes);
 // listo, corregido
 app.use(postRoutes);
 
+app.use(likeRoutes);
+app.use(commentRoutes);
 
 app.listen(
   config.port,
