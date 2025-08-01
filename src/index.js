@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import config from "./config/config.js";
 import userRoutes from "./routes/users.routes.js";
+import postRoutes from "./routes/posts.routes.js";
 
 const app = express();
 
@@ -16,6 +17,7 @@ cors({
 
 // rutas de usuarios brow
 app.use(userRoutes);
+app.use(postRoutes);
 
 
 app.listen(
