@@ -17,6 +17,8 @@ cors({
 
 // rutas de usuarios brow
 app.use(userRoutes);
+
+// listo, corregido
 app.use(postRoutes);
 
 
